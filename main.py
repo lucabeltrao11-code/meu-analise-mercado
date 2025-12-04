@@ -14,6 +14,7 @@ def analisar_cripto(cripto: str, dias: int = 30):
     """
     Ex.: /analisar/bitcoin?dias=90
     """
+   # Opcionalmente, pode usar cache automático
     data = get_crypto_price_history(cripto, dias)
     analise = analyze_asset(data)
     return analise
